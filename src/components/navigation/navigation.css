@@ -1,0 +1,36 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* center them */
+  gap: 1.5rem;               /* space between buttons */
+  z-index: 10;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+
+/* Apply your existing enter-btn styling */
+.nav-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6bba, #ffd1ff);
+  color: #2b1022;
+  box-shadow: 0 0 18px rgba(255, 107, 186, 0.6);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: .75s;
+  transition: transform 0.2s ease;
+}
+
+/* Same hover behavior as your main button */
+.nav-btn:hover {
+  transform: translateY(5px);
+}

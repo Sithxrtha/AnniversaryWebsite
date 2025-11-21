@@ -1,0 +1,97 @@
+.welcome-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;    
+}
+
+/* Text content on top of the canvas */
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* You can keep using your existing title / letter / button styles */
+.welcome-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.welcome-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.enter-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6bba, #ffd1ff);
+  color: #2b1022;
+  box-shadow: 0 0 18px rgba(255, 107, 186, 0.6);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 1.3s;
+}
+
+/* The animated background */
+.heart-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;         /* behind the content */
+  pointer-events: none; /* so clicks go THROUGH */
+}
+
+.enter-btn:hover {
+  transform: translateY(4px);
+}
+
+/* Simple animations reused from before */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
