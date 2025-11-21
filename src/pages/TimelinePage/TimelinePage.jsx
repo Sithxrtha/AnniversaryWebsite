@@ -7,9 +7,10 @@ import "./TimelinePage.css";
 //image imports
 
 
+
 const events = [
   {
-    date: "2021",
+    date: "July 1st, 2023",
     title: "When It All Began",
     text: "The first time our paths crossed and everything quietly started to change.",
     images: []
@@ -138,7 +139,7 @@ export default function TimelinePage() {
       {/* Bottom navbar */}
       <BottomNav
         onBack={() => navigate(-1)}
-        onNext={() => navigate("/video")}
+        onNext={() => navigate("/message")}
       />
     </div>
   );

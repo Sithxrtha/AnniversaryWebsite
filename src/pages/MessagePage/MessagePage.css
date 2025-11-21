@@ -1,0 +1,68 @@
+.message-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-content {
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+/* Card itself */
+.message-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.message-title {
+  margin-bottom: 1rem;
+}
+
+/* Image below the card */
+.message-image-wrapper {
+}
+
+.message-image {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.back-btn-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styled similar to .enter-btn */
+.back-btn {
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffd1ff, #ff6bba);
+  color: #2b1022;
+  box-shadow: 0 0 16px rgba(255, 107, 186, 0.4);
+
+  /* Smooth fade in effect */
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 1.4s; /* Slight delay after the image */
+}
+
+.back-btn span {
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
