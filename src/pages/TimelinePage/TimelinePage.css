@@ -181,24 +181,24 @@
   position: relative;
   margin: 0.7rem auto 1rem auto;
   width: 100%;
-  max-width: 625px; /* limit width */
+  max-width: 625px;
 }
 
 .timeline-image-wrapper {
   width: 100%;
-  max-height: 280px;       /* ⬅️ LIMIT HEIGHT */
+  height: 280px;              /* use fixed height instead of max-height */
   border-radius: 14px;
   overflow: hidden;
-  display: flex;           /* center the image */
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;        /* nice fade behind oddly-sized images */
+  background: #000;
 }
 
 .timeline-image {
   width: 100%;
-  height: auto;            /* ⬅️ keeps original proportions */
-  object-fit: contain;     /* ⬅️ SHOW FULL IMAGE, no cropping */
+  height: 100%;               /* <-- important */
+  object-fit: contain;        /* <-- entire image visible, no crop */
   display: block;
 }
 
@@ -232,10 +232,7 @@
 
 /* Dots under image */
 .timeline-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 0.4rem;
+  display: none;
 }
 
 .timeline-dot {
